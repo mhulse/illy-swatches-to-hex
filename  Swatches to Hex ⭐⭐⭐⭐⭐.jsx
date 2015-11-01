@@ -1,11 +1,11 @@
+#target illustrator
+
 /* jshint unused:false */
 /* exported main */
 /* globals app */
 
-#target illustrator
-
 /**
- * @@@BUILDINFO@@@ swatch-name-to-hex.jsx !Version! Wed Oct 28 2015 20:04:24 GMT-0700
+ * @@@BUILDINFO@@@  Swatches to Hex ⭐⭐⭐⭐⭐.jsx !Version! Sat Oct 31 2015 18:28:59 GMT-0700
  */
 
 Array.prototype.indexOf = Array.prototype.indexOf || function(value, start) {
@@ -34,9 +34,13 @@ var main = (function() {
 	var kind;
 	var names = [];
 	var updated;
+	var component2hex = function(component) {
+		var hex = component.toString(16);
+		return hex.length == 1 ? '0' + hex : hex;
+	};
 	var rgb2hex = function(red, green, blue) {
 		var i;
-		var rgb = [red.toString(16), green.toString(16), blue.toString(16)];
+		var rgb = [component2hex(red), component2hex(green), component2hex(blue)];
 		for (i = 0; i < 3; i++) {
 			if (rgb[i].length == 1) {
 				rgb[i] = (rgb[i] + rgb[i]);
