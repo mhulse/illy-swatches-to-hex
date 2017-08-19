@@ -19,7 +19,7 @@ function install() {
 	mkdir -pv "$INSTALL_DIR"
 	
 	# Remote repo zip file:
-	SOURCE_ZIP="https://github.com/mhulse/illy-nudge/tarball/master"
+	SOURCE_ZIP="https://github.com/mhulse/illy-swatches-to-hex/tarball/master"
 	
 	# Get the zip file and extract all files:
 	curl -sS -#L "$SOURCE_ZIP" | tar -xzv --strip-components 1 -C "$INSTALL_DIR" "*.jsx"
